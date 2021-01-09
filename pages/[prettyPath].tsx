@@ -46,7 +46,7 @@ export async function getStaticPaths() {
   const notionPageIds = Object.keys(pages)
 
   const paths = [
-    ...notionPageIds.map(pageId => `/${pageId}`),
+    // ...notionPageIds.map(pageId => `/${pageId}`),
     ...notionPageIds.map(pageId => `/${notionPageIdToPrettyPagePath(pageId)}`)
   ].filter(path => path !== '/')
 
