@@ -2,6 +2,8 @@ import { GetStaticProps } from 'next'
 import { NotionAPI } from 'notion-client'
 import NotionPage, { NotionPageProps } from '../components/NotionPage'
 
+import 'prismjs/themes/prism-tomorrow.css'
+
 const notion = new NotionAPI()
 
 export const getStaticProps: GetStaticProps<NotionPageProps> = async () => {

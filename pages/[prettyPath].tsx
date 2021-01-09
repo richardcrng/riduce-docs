@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { getAllPagesInSpace } from 'notion-utils'
 import { NotionAPI } from 'notion-client'
 import NotionPage, { NotionPageProps } from '../components/NotionPage'
-import { hasPrettyNotionPath, notionPageIdToPrettyPagePath, prettyPagePathToNotionId } from '../constants/notion-paths'
+import { notionPageIdToPrettyPagePath, prettyPagePathToNotionId } from '../constants/notion-paths'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
@@ -18,10 +18,9 @@ export const getStaticProps: GetStaticProps<PrettyPathPageProps, { prettyPath: s
     return {
       props: {
         recordMap,
-        prettyPath,
+        prettyPath: notionPageIdToPrettyPagePath(notionPageId),
         notionPageId
-      },
-      revalidate: 10
+      }
     }
   } else {
     return {
@@ -49,7 +48,7 @@ export async function getStaticPaths() {
   const paths = [
     ...notionPageIds.map(pageId => `/${pageId}`),
     ...notionPageIds.map(pageId => `/${notionPageIdToPrettyPagePath(pageId)}`)
-  ]
+  ].filter(path => path !== '/')
 
   return {
     paths,
@@ -66,8 +65,9 @@ export default function PrettyPathPage({ prettyPath, notionPageId, ...rest }: Pr
   const router = useRouter()
 
   useEffect(() => {
-    if (hasPrettyNotionPath(notionPageId)) {
-      router.push(notionPageIdToPrettyPagePath(notionPageId))
+    if (router.query.prettyPath !== prettyPath) {
+      console.log(router.query.prettyPath, prettyPath, 'printed')
+      router.push(prettyPath || '/')
     }
   })
   
