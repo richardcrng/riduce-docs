@@ -25,7 +25,10 @@ export default function NotionPage({
       <Head>
         <title>{title}</title>
       </Head>
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+      <NotionRenderer
+        recordMap={recordMap}
+        darkMode={false}
+      />
     </>
   )
 
