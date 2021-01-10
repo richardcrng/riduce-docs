@@ -29,7 +29,6 @@ export default function NotionPage({
         recordMap={recordMap}
         darkMode
         fullPage
-        footer={<p>Test footer</p>}
       />
     </>
   )
