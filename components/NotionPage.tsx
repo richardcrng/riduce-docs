@@ -28,6 +28,7 @@ export default function NotionPage({
       <NotionRenderer
         recordMap={recordMap}
         darkMode={false}
+        fullPage
       />
     </>
   )
