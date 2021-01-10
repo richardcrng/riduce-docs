@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@geist-ui/react": "^2.1.0-canary.2",
+    "js-yaml": "^4.0.0",
     "next": "10.0.5",
     "notion-client": "^2.5.2",
     "notion-types": "^2.5.1",

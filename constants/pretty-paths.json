@@ -9,5 +9,15 @@
   "3202f2c2ec57457abfac1772f9e649bc": "useRiducer-ToDos",
   "8f5e19b5962d4b65adb09f3d7f0d393b": "simple-redux-usage",
   "93bfdfae00f74e00bbd794d6e6edb3cf": "advanced-usage",
-  "c2997a85ed214e33855037deb7c28ab5": "riduce"
+  "7397e92786e646599a58bc408e18896f": "migrating",
+  "2929f05b1ae3492688e38c7b0f7d8e39": "flux",
+  "c2997a85ed214e33855037deb7c28ab5": "riduce",
+  "7aa464e32f544f20a0b5ab61bede5358": "use-riducer",
+  "a03810daa4be471b919ed5e08debabf4": "bundle",
+  "24dc274e0db84297ad6880e1a64eaabf": "actions",
+  "561034d6326c4c01aa115eb68a22ca1b": "create",
+  "7e36a50f8106428b86651f3daa0e3c9d": "customRiducer",
+  "6a124ff397f5478fbdffbbb1aad0539e": "reducer",
+  "a4e6be197d9b405a944b40cb3a049411": "riducerDict",
+  "f5ca45bcecbb45abb9e797d8f3641733": "action-creators"
 }
