@@ -27,6 +27,7 @@ export const getStaticProps: GetStaticProps<
         prettyPath: notionPageIdToPrettyPagePath(notionPageId),
         notionPageId,
       },
+      revalidate: 1,
     };
   } else {
     return {
