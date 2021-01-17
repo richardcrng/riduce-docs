@@ -13,6 +13,7 @@ export const getStaticProps: GetStaticProps<NotionPageProps> = async () => {
     props: {
       recordMap,
     },
+    revalidate: 1,
   };
 };
 
